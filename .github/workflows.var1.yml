@@ -1,0 +1,10 @@
+name: Script Runner 
+on: [push]
+
+jobs: 
+  run-script: 
+    runs-on: ubuntu-latest 
+    steps: 
+    - uses: actions/checkout@v3 
+    - name: Run Script 
+      run: echo "This is a test script" > test.txt && cat test.txt.
